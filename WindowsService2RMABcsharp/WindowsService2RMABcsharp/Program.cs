@@ -93,6 +93,34 @@ namespace WindowsService2RMABcsharp
                     }
                 }
             }
+
+
+            private static CultureInfo GetCulture()
+            {
+                CultureInfo culturePeru = null;
+                try
+                {
+                    culturePeru = new CultureInfo("es-PE", false);
+                    culturePeru.NumberFormat.NumberGroupSeparator = ",";
+                    culturePeru.NumberFormat.NumberDecimalSeparator = ".";
+                    culturePeru.DateTimeFormat.LongDatePattern = "dd-MM-yyyy hh:mm:ss";
+                }
+                catch (System.Exception ex)
+                {
+                    throw new Exception(ex.Message, ex);
+                }
+                return culturePeru;
+            }
+
+            private void SetCulture()
+            {
+                CultureInfo culturePeru = new CultureInfo("es-PE", false);
+                culturePeru.NumberFormat.NumberGroupSeparator = ",";
+                culturePeru.NumberFormat.NumberDecimalSeparator = ".";
+                culturePeru.DateTimeFormat.LongDatePattern = "dd-MM-yyyy hh:mm:ss";
+                Thread.CurrentThread.CurrentCulture = culturePeru;
+                Thread.CurrentThread.CurrentUICulture = culturePeru;
+            }
         }
     }
 }
