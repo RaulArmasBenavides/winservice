@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EC5328AA-4583-40B7-9347-7C08F0F86A5E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsService2RMABcsharp.Debugger</RootNamespace>
     <AssemblyName>WindowsService2RMABcsharp.Debugger</AssemblyName>
@@ -29,6 +29,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WindowsService2RMABcsharp.Debugger.Inicio</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

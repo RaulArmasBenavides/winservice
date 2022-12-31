@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsService2RMABcsharp.Debugger
 {
-    public class Inicio
+  
+    public static class Inicio
     {
+        [STAThread]
         static void Main()
         {
             try
@@ -30,6 +32,7 @@ namespace WindowsService2RMABcsharp.Debugger
         public class MiServicioVirtual : ApplicationContext
         {
             Thread trdEvento;
+            Thread trdEvento2;
 
             public MiServicioVirtual()
             {
@@ -39,11 +42,19 @@ namespace WindowsService2RMABcsharp.Debugger
                     cultureperu.NumberFormat.NumberGroupSeparator = ",";
                     cultureperu.NumberFormat.NumberDecimalSeparator = ".";
 
-                    this.trdEvento = new Thread(MonitorearProceso);
-                    this.trdEvento.Name = "Servicio OC NET";
-                    this.trdEvento.IsBackground = true;
-                    this.trdEvento.CurrentCulture = cultureperu;
+                    this.trdEvento = new Thread(MonitorearProceso)
+                    {
+                        Name = "Servicio OC NET",
+                        IsBackground = true,
+                        CurrentCulture = cultureperu
+                    };
                     this.trdEvento.Start();
+
+
+
+                    this.trdEvento2 = new Thread(Imprimir);
+                    this.trdEvento2.Start();
+
                 }
                 catch (Exception ex)
                 {
@@ -70,7 +81,8 @@ namespace WindowsService2RMABcsharp.Debugger
 
                                     //__boOCService.Iniciar();
 
-                                    //Thread.Sleep(Constantes.TIEMPO_ESPERA_DEFECTO);
+                                    Thread.Sleep(5000);
+                                    Debug.Print("Cargando el método MonitorearProceso");
                                 }
                                 catch (Exception ex)
                                 {
@@ -119,6 +131,18 @@ namespace WindowsService2RMABcsharp.Debugger
                 culturePeru.DateTimeFormat.LongDatePattern = "dd-MM-yyyy hh:mm:ss";
                 Thread.CurrentThread.CurrentCulture = culturePeru;
                 Thread.CurrentThread.CurrentUICulture = culturePeru;
+            }
+
+
+
+            public static void Imprimir()
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Console.WriteLine("Ejecutando Hilo2");
+                    Thread.Sleep(100);
+                }
+
             }
         }
     }
