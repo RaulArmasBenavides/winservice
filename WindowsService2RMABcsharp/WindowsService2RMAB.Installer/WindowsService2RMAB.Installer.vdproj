@@ -28,13 +28,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FEC05C0F39BFC70E25ED32CA239714ED"
+        "OwnerKey" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
+        "OwnerKey" = "8:_FEC05C0F39BFC70E25ED32CA239714ED"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +55,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -71,12 +79,76 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_00C3E3C7DD164FB88C3F42F9B6D7466C"
+            {
+            "Name" = "8:Primary output from WindowsService2RMABcsharp (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_0A6B4123_6247_4218_AA15_C60638F7068E"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_14770149B673487B8D8C0A1BEA2CD14E"
+            {
+            "Name" = "8:Primary output from WindowsService2RMABcsharp (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_43981DE7_CD0F_4B81_8348_3689433EBBB8"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_4449EA0D69284948B157D029F83600FD"
+            {
+            "Name" = "8:Primary output from WindowsService2RMABcsharp (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
+            "FileType" = "3:2"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_EFF1AC2B_AB53_4ECF_A40D_31F0D2A882B6"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_6682221326DB433AA5C9E8AD7D09FE09"
+            {
+            "Name" = "8:Primary output from WindowsService2RMABcsharp (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_4F1E2B46AFDA42259477CA47BBAE1EA3"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_29E575F1_1F45_46FF_B105_244081975B7B"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
